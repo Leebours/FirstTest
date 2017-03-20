@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-family: 'Microsoft YaHei', Verdana, Geneva, sans-serif;
+        }
+        .thum-group{
+            padding:20px;
+            width:860px;
+            margin:0 auto;
+        }
+        .thum-item{
+            width:260px;
+            height:324px;
+            position:relative;
+            overflow: hidden;
+            float:left;
+            cursor: pointer;
+            margin-right:40px;
+            background-color: #AEB5BF;
+            -webkit-box-shadow: 0 4px 8px 1px rgba(0,0,0,.2);
+            -moz-box-shadow: 0 4px 8px 1px rgba(0,0,0,.2);
+            box-shadow:0 4px 8px 1px rgba(0,0,0,.2);
+        }
+        .nomargin-r{
+            margin-right:0;
+        }
+        .thum-group .thum-item1 {
+            background: url("http://7xnlea.com2.z0.glb.qiniucdn.com/dmleiv2-thum-item1.png") no-repeat;
+        }
+        .thum-group .thum-item2 {
+            background: url("http://7xnlea.com2.z0.glb.qiniucdn.com/dmleiv2-thum-item2.png") no-repeat;
+        }
+        .thum-group .thum-item3 {
+            background: url("http://7xnlea.com2.z0.glb.qiniucdn.com/dmleiv2-thum-item3.png") no-repeat;
+        }
+        .thum-item-title{
+            display: block;
+            position: absolute;
+            width: 100%;
+            background-color: transparent;
+            text-align: center;
+            -webkit-transition: all ease 0.3s;
+            -moz-transition: all ease 0.3s ;
+            -ms-transition: all ease 0.3s ;
+            -o-transition: all ease 0.3s ;
+            transition: all ease 0.3s ;
+            font-size:20px;
+            color:#fff;
+            z-index: 78;
+            top: 85px;
+        }
+        .thum-item-sin-caption {
+            position: absolute;
+            background-color: #fff;
+            width: 100%;
+            height: 90px;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            padding-top: 18px;
+        }
+        .thum-item-full-caption {
+            position: absolute;
+            width: 100%;
+            height: 319px;
+            box-sizing: border-box;
+            padding: 20px;
+            left: 0;
+            bottom: -319px;
+            z-index: 67;
+            font-size: 14px;
+            color: #999999;
+            background-color: #eeeeee;
+            transition: all .3s ease;
+        }
+        .thum-item-full-caption-text {
+            display: block;
+            margin-top: 170px;
+            transition: all .3s ease;
+            line-height:30px;
+        }
+        .thum-item-full-caption-bg {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 200px;
+            left: 0;
+            background-color: #eee;
+        }
+        .thum-item-arrow-circle {
+            display: block;
+            position: absolute;
+            z-index: 75;
+            text-align: center;
+            line-height: 25px;
+            bottom: 20px;
+            left: 120px;
+            color:#fff;
+            border-radius: 50%;
+            background-color: #999999;
+            width: 28px;
+            height: 28px;
+            transition: all .3s ease;
+        }
+        .thum-item-circle {
+            display: block;
+            position: absolute;
+            left:0px;
+            top: -17px;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background-color:rgba(255,102,84,0.9);
+            transform: scale(0.5);
+            transition: all .15s ease;
+        }
+        /*鼠标移上去的CSS样式*/
+        .thum-item.active .thum-item-title {
+            top: 35px;
+            color: #333333;
+        }
+
+        .thum-item.active .thum-item-full-caption {
+            bottom: 0;
+        }
+
+        .thum-item.active .thum-item-full-caption-text {
+            margin-top: 50px;
+        }
+
+        .thum-item.active .thum-item-arrow-circle {
+            transform: rotateZ(-180deg);
+            background-color: #e84c3d;
+            color: #fff;
+            transform-origin:	50% 50% 0;
+        }
+
+        .thum-item.active .thum-item-circle {
+            top: 0px;
+            height: 5px;
+            border-radius: 0;
+            transform: scale(1);
+        }
+        .clearboth{
+            clear:both;
+        }
+
+    </style>
+</head>
+<body>
+<div class="thum-group">
+    <div class="thum-item thum-item1">
+        <span class="thum-item-circle"></span>
+        <span class="thum-item-title">投放精准</span>
+        <div class="thum-item-sin-caption">海量社会化媒体资源</div>
+        <div class="thum-item-full-caption">
+            <span class="thum-item-full-caption-text">聚集行业90%知名自媒体红人大V，日均覆盖50亿PV，形成遍及全网的覆盖势态。</span>
+            <span class="thum-item-full-caption-bg"></span>
+        </div>
+        <span class="thum-item-arrow-circle">^</span>
+    </div>
+    <div class="thum-item thum-item2">
+        <span class="thum-item-circle"></span>
+        <span class="thum-item-title">覆盖用户</span>
+        <div class="thum-item-sin-caption">一站式媒体智投</div>
+        <div class="thum-item-full-caption">
+            <span class="thum-item-full-caption-text">依托海量优质流量资源，为广告主提供跨平台、跨终端的媒体投放策略，效果可观、一键定投的智能媒体投放。</span>
+            <span class="thum-item-full-caption-bg"></span>
+        </div>
+        <span class="thum-item-arrow-circle">^</span>
+    </div>
+    <div class="thum-item thum-item3 nomargin-r">
+        <span class="thum-item-circle"></span>
+        <span class="thum-item-title">精准监测</span>
+        <div class="thum-item-sin-caption">客户服务体系</div>
+        <div class="thum-item-full-caption">
+            <span class="thum-item-full-caption-text">组建大客户服务团队，贴身定制涵盖营销策略、媒体投放策略及效果监测的一站式全网整合营销解决方案。</span>
+            <span class="thum-item-full-caption-bg"></span>
+        </div>
+        <span class="thum-item-arrow-circle">^</span>
+    </div>
+    <div class="clearboth"></div>
+</div>
+</body>
+<script src="js/jquery-3.1.1.js"></script>
+<script>
+    $('.thum-item').hover(
+        function(event) {
+            var circle = $(this).find('.thum-item-circle');
+            circle.attr('style', '');
+            $(this).addClass('active');
+        },
+        function(event) {
+            var circle = $(this).find('.thum-item-circle');
+            circle.css({
+                transition: 'none',
+                transform: 'scale(1.2)',
+                top: '-28px',
+                borderRadius: '50%'
+            });
+            setTimeout(function() {
+                circle.css({
+                    transition: 'all .15s ease',
+                    transform: 'scale(0.5)',
+                    top: '-28px',
+                    height: '260px',
+                    borderRadius: '50%'
+                });
+            }, 0);
+            $(this).removeClass('active');
+        }
+    );
+</script>
+</html>
